@@ -12,7 +12,7 @@
 	VALUES ('$ownerName', '$ownerUsername', '$ownerPassword')";
 
 	if ($conn->query($sql) === TRUE) {
-		echo "New record created successfully";
+		
 	} else {
 		echo "Error: " . $sql . "<br>" . $conn->error;
 	}
@@ -30,10 +30,13 @@
 
 	<body>
 		<?php
-		include 'navigation.php';
-	?>
+			include 'navigation.php';
+		?>
 
 		<div class="bodycontainer">
+			<h3>Thanks for creating an account</h3>
+			<p>Please login with your new username and password on the homepage.</p>
+			<a href="index.php">Back to Home</a>
 		</div>
 	</body>
 

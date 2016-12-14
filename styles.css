@@ -29,9 +29,10 @@ body{
 }
 
 .pets{
-	margin-top: 0px;
-	margin-bottom: 0px;
+	margin: 0 auto;
+	width: 300px;
 }
+
 
 nav{
 	background-color: white;

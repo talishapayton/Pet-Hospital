@@ -113,14 +113,13 @@
 
 	<body>
 		<?php
-		include 'navigation.php';
-	?>
+			include 'navigation.php';
+		?>
 
 		<div class="bodycontainer">
+			<h3> Pet has been added successfully!</h3>
+			<p>Press back button to return, to your account page</p>
 		</div>
-		
-
-		
 	</body>
 
 </html>

@@ -8,14 +8,9 @@
 	</head>
 
 	<body>
-		<nav>
-			<div class="navcontainer">
-				<h1><a href="index.php">Pet Hospital</a></h1>
-				<ul>
-					<li><a href="index.php">Logout</a></li>
-				</ul>
-			</div>
-		</nav>
+		<?php
+			include 'navigationLogout.php';
+		?>
 
 		<?php
 
@@ -41,7 +36,7 @@
 					//If username and password are valid, set the cookie
 					if ($result->num_rows > 0) 
 					{
-						echo "Hey DOC, welcome back to work ";
+						echo "<h3>Hey DOC, welcome back to work </h3>";
 
 						setCookie('docUsername', $docUsername, time() + 60, "/"); //logged in for 60 seconds
 						setCookie('docPassword', $docPassword, time() + 60, "/"); //logged in for 60 seconds
@@ -50,11 +45,12 @@
 					else //otherwise redirect them back to the homepage
 					{
 						echo "Username and password combination not found";
-						header( 'Refresh: 2; URL= docLogin.php' );
+						header( 'Location: docLogin.php' );
 					}
 				}
 				else
 				{ //If you get to this page but are not logged in redirect back to homepage
+					echo "You have been logged out. Return to login page.";
 					header( 'Refresh: 1; URL= docLogin.php' );
 				}		
 			}		
@@ -65,7 +61,7 @@
 			<h2>Pet Search</h2>
 			<form action="docAccount.php" method="POST">
 				<label for="search">Search:</label>
-				<input type="text" name="search" id="search" required title="search" value=""/>
+				<input type="text" name="search" id="search" required title="search" value=" by petID, Owner Name or Pet Name"/>
 				<button type="submit">Submit</button>
 			</form>
 
@@ -88,15 +84,27 @@
 
 							if ($searchResult->num_rows > 0)
 							 {
+							 	echo"<table  style='width:100%'>
+											<tr>
+												<th>ID</th>
+								    			<th>Owner</th>
+								    			<th>Petname</th>
+								    			<th>PetType</th>
+								    			<th>PetAge</th>
+								    			<th>Update</th>
+								    			<th>Delete</th>
+								  			</tr> ";
+
 							    // output data of each row
 							    while($row = $searchResult->fetch_assoc()) {
 							    	
 							    	//create a table that shows owners and their pets
-							        echo "<p class='pets'>" . $row['ownerName'] . " | " . "<a href=petDetail.php?petID="  . $row['ID'] .  ">"  . $row['petName'] ."</a> | " . $row['Type'] . " | " . $row['petAge'] . " | " .
+							        echo "<tr><td>" . $row['ID'] . "</td><td>". $row['ownerName'] . "</td><td>" . "<a href=petDetail.php?petID="  . $row['ID'] .  ">"  . $row['petName'] ."</a></td><td>" . $row['Type'] . "</td><td>" . $row['petAge'] . "</td><td>" .
 
 							        		"<a href=deletePet.php?petID=" . $row['ID']. ">delete</a>" .
-							        		 " | <a href=petUpdate.php?petID=" . $row['ID']. "> UPDATE </a>" ."</p>";
+							        		 "</td><td><a href=petUpdate.php?petID=" . $row['ID']. "> UPDATE </a>" ."</tr>";
 							    }
+							    echo "</table>";
 							}
 						}
 						else //Otherwise show the full database
@@ -134,9 +142,10 @@
 							     //    		"<a href=deletePet.php?petID=" . $row['ID']. ">delete</a>" .
 							     //    		 " | <a href=petUpdate.php?petID=" . $row['ID']. "> UPDATE </a>" ."</p>";
 							    }
+							    echo "</table>";
 							}
 						}	
-						echo "</table>";
+						
 				?>
 				
 

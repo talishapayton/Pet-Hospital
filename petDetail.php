@@ -11,12 +11,9 @@
 
 	<body>
 		<nav>
-			<div class="navcontainer">
-				<h1><a href="index.php">Pet Hospital</a></h1>
-				<ul>
-					<li><a href="index.php">Logout</a></li>
-				</ul>			
-			</div>
+			<?php
+				include 'navigationLogout.php';
+			?>
 		</nav>
 
 		<div class="bodycontainer">
@@ -30,7 +27,7 @@
 				{
 
 					$petID = $_GET['petID'];
-					echo "PetID: " . $petID;
+					echo "<p class='pets'><b>PetID: </b>" . $petID . "</p>";
 
 					$sql = "SELECT owners.Name as ownerName, pets.Name as petName, pets.ID, pets.Age as petAge,
 								 Type, Medical_History, Symptoms, Next_Appt, Notes 
@@ -44,9 +41,9 @@
 						while($row = $result->fetch_assoc()) 
 						{
 							    	
-							//create a table that shows owners and their pets
-							echo "<p class='pets'> Owner Name: " . $row['ownerName'] . " <br/> Pet Name:  " . $row['petName'] ." <br/> Type: " . $row['Type'] . " <br/>Pet Age: " . $row['petAge'] . " <br/> Current Symptoms: " .
-								    $row['Symptoms'] . "<br/> Medical_History: " . $row['Medical_History'] . " <br/> Next_Appt: " . $row['Next_Appt'] ;
+							echo "<p class='pets'><b>Owner Name: </b>" . $row['ownerName'] . " <br/> <b>Pet Name:  </b>" . $row['petName']
+									 ." <br/> <b>Type: </b>" . $row['Type'] . " <br/><b>Pet Age: </b>" . $row['petAge'] . " <br/><b> Current Symptoms: </b>" .
+								   		 $row['Symptoms'] . "<br/> Medical_History: " . $row['Medical_History'] . " <br/> Next_Appt: " . $row['Next_Appt'] ;
 						}
 					}
 				}		
@@ -60,8 +57,6 @@
 				<br/>
 				<button type="submit">Submit</button>
 			</form>
-
-
 		</div>
 			
 	</body>

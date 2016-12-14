@@ -12,7 +12,7 @@
 
 	<body>
 		<?php
-		include 'navigation.php';
+			include 'navigation.php';
 		?>
 
 		<div class="bodycontainer">

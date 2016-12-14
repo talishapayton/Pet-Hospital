@@ -10,10 +10,10 @@
 
 	<body>
 
-
 		<?php
-		include 'navigation.php';
+			include 'navigationLogout.php';
 		?>
+
 		<div class="bodycontainer">
 
 		<div class="leftSide">
@@ -46,6 +46,7 @@
 			else 
 			{
 				echo "Username and password combination not found";
+				header("Location: index.php");
 			}
 
 			//get the owners ID from the array. 
