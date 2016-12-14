@@ -1,0 +1,171 @@
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	background-color: gray;
+	font-family: lato, sans-serif;
+	color: white;
+	margin: 0 auto;
+}
+
+.navcontainer{
+	margin: 0 auto;
+	width: 1200px;
+
+}
+.bodycontainer{
+	margin: 0 auto;
+	width: 1200px;
+	
+	padding-top: 10px;
+
+}
+.logincontainer{
+	margin: 0 auto;
+	width: 1000px;
+	padding-top: 10px;
+
+}
+
+.pets{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+nav{
+	background-color: white;
+	height: 100px;
+	color: gray;
+
+}
+
+h1 a{
+	width: 150px;
+	font-size: 35px;
+	text-align: center;
+	margin: 0;
+	padding:0;
+	text-decoration: none;
+	float: left;
+	color: lightblue;
+}
+
+h2{
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 15px;
+
+}
+
+p{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	padding-left: 10px;
+}
+
+li{
+	list-style-type: none;
+	display: inline-block;
+	/*background-color: green;*/
+	float: right;
+	padding-right: 20px;
+	margin-top: 40px;
+
+}
+
+li a{
+	text-decoration: none;
+	color: gray;
+}
+
+ul{
+	margin-right: 40px;
+	background-color: blue;
+}
+
+h3{
+	clear: both;
+}
+
+form{
+	margin: 0 auto;
+	border: 3px solid white;
+	padding: 20px;
+	padding-top: 10px;
+	width: 500px;
+}
+
+form a{
+	margin-left: 40px;
+}
+
+button{
+	margin-top: 10px;
+	margin-left: 113px;
+}
+
+label{
+	display: inline-block;
+	width: 110px;
+	vertical-align: top;
+	text-align: left;
+}
+
+input,select, textarea{
+	width: 250px;
+    padding: 3px 10px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border: 2px solid lightblue;
+    border-radius: 4px;
+}
+
+.middle{
+	width: 33%;
+	float: left;
+}
+
+.rightSide{
+	width: 33%;
+	float: right;
+}
+
+#addPet{
+	width: 300px;
+}
+
+.middle h2, .rightSide h2{
+	margin-top: 0;
+}
+
+.leftSide{
+	width: 33%;
+	float: left;
+}
+
+.aPet{
+	border: 1px solid white;
+	height: 125px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.left{
+	float: left;
+	width: 200px;
+
+}
+
+.docNotes{
+	float: none;
+}
+
+#updatePet{
+
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
