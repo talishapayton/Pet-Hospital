@@ -1,0 +1,28 @@
+The login info for both doctors and pet owners are in the database. Also the Create Account functionality is working. 
+
+DOCTOR LOGIN
+Username: doctor
+Password: doctor
+
+OWNER LOGINs
+Username: test
+Password: test
+
+Username: test2
+Password: test2
+
+Username: test3
+Password: test3
+
+Special Functionality
+SEARCH: you can search by ID, Owner Name or Pet Name
+LOGIN/LOGOUT: Doctor will be logged out after 60 seconds with use of Cookies and Sessions
+CONCATENATION: Medical History appends the entries, it doesn't replace them. 
+
+
+CSS: When trying to implement CSS layouts to match, it broke my functionality so it looks almost the same as midterm. 
+
+Scenarios to test: 
+-As a pet owner create and account and add some pets. 
+-Login as a doctor and view the pet, that was added. Set an initial appt to see the pets. 
+-Login with the account you created to see appts and notes that were added by the doctor. 
